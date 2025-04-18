@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { User } from "@/types";
 import { useEffect } from "react";
 import BoldFormLabel from "@/components/BoldFormLabel";
+import { Send } from "lucide-react";
 
 const formSchema = z.object({
   email: z.string().optional(),
@@ -50,7 +51,7 @@ const UserProfileForm = ({ onSave, isLoading, currentUser }: Props) => {
       >
         <div>
           <h2 className="text-2xl font-bold"> User Profile Form</h2>
-          <FormDescription>
+          <FormDescription className="text-gray-500 mb-2">
             View and change your profile information here
           </FormDescription>
         </div>
@@ -128,7 +129,7 @@ const UserProfileForm = ({ onSave, isLoading, currentUser }: Props) => {
             type="submit"
             className="text-white bg-red-500 hover:bg-gray-500"
           >
-            Submit
+            <Send/>Submit
           </Button>
         )}
       </form>

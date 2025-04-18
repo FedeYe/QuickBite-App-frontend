@@ -8,6 +8,7 @@ import {
 import { useAuth0 } from "@auth0/auth0-react";
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
+import { Separator } from "./ui/separator";
 
 const UsernameMenu = () => {
   const { user, logout } = useAuth0();
@@ -19,10 +20,16 @@ const UsernameMenu = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="bg-white">
         <DropdownMenuItem className="hover:bg-red-100 ">
+          <Link to="/manage-restaurant" className="font-bold text-red-500">
+            Manage Restaurant
+          </Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem className="hover:bg-red-100 ">
           <Link to="/user-profile" className="font-bold text-red-500">
             User Profile
           </Link>
         </DropdownMenuItem>
+        <Separator className="border border-gray-700"/>
         <DropdownMenuItem>
           <Button
             onClick={() => logout()}

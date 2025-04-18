@@ -1,6 +1,7 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import { Button } from "./ui/button";
 import UsernameMenu from "./UsernameMenu";
+import { CircleUserRound } from "lucide-react";
 
 const MainNav = () => {
   const { loginWithRedirect, isAuthenticated } = useAuth0();
@@ -11,10 +12,10 @@ const MainNav = () => {
       ) : (
         <Button
           variant="ghost"
-          className="font-bold hover:text-red-500 hover:bg-gray-500"
+          className="font-bold hover:text-red-500"
           onClick={async () => await loginWithRedirect()}
         >
-          Login
+          <CircleUserRound />Login
         </Button>
       )}
     </span>

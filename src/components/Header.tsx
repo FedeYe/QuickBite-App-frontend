@@ -14,7 +14,7 @@ const Header = () => {
             justify-between = add space between all the childrens
             items-center = center the items vertically
          */}
-        <Link to="/" className="text-3xl font-bold tracking-tight text-red-500">
+        <Link to="/" className="text-3xl font-bold tracking-tight text-red-500 hover:text-red-400 hover:underline">
           QuickBite.com
         </Link>
         {/* 
