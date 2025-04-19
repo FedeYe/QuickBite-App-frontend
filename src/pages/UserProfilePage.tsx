@@ -6,7 +6,7 @@ const UserProfilePage = () => {
   const { updateUser, isLoading: isUpdateLoading } = useUpdateMyUser();
 
   if (isGetLoading) {
-    return <span>Loading...</span>;
+    return <span className="p-2">Loading...</span>;
   }
 
   if (!currentUser) {

@@ -24,7 +24,7 @@ const UsernameMenu = () => {
             Manage Restaurant
           </Link>
         </DropdownMenuItem>
-        <DropdownMenuItem className="hover:bg-red-100 ">
+        <DropdownMenuItem className="hover:bg-red-100 mb-1">
           <Link to="/user-profile" className="font-bold text-red-500">
             User Profile
           </Link>
@@ -35,7 +35,7 @@ const UsernameMenu = () => {
             onClick={() => logout()}
             className="flex flex-2 text-white font-bold bg-red-500 hover:bg-gray-500"
           >
-            Log Out
+            Logout
           </Button>
         </DropdownMenuItem>
       </DropdownMenuContent>

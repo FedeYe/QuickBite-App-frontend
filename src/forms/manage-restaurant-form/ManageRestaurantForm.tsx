@@ -6,6 +6,10 @@ import DetailsSection from "./DetailsSection";
 import { Separator } from "@/components/ui/separator";
 import CuisinesSection from "./CuisinesSection";
 import MenuSection from "./MenuSection";
+import ImageSection from "./ImageSection";
+import LoadingButton from "@/components/LoadingButton";
+import { Button } from "@/components/ui/button";
+import { Send } from "lucide-react";
 
 const formSchema = z.object({
   restaurantName: z.string({
@@ -31,7 +35,10 @@ const formSchema = z.object({
   menuItems: z.array(
     z.object({
       name: z.string().min(1, "name is required"),
-      price: z.coerce.number().min(1, "price is required"),
+      price: z.coerce.number({
+        required_error: "price is required",
+        invalid_type_error: "must be a number",
+      }),
     })
   ),
   imageFile: z.instanceof(File, { message: "image is required" }),
@@ -68,6 +75,18 @@ const ManageRestaurantForm = ({ onSave, isLoading }: Props) => {
         <CuisinesSection />
         <Separator className="border border-gray-700" />
         <MenuSection />
+        <Separator className="border border-gray-700" />
+        <ImageSection />
+        {isLoading ? (
+          <LoadingButton />
+        ) : (
+          <Button
+            type="submit"
+            className="text-white bg-black hover:bg-gray-500"
+          >
+            <Send/>Submit
+          </Button>
+        )}
       </form>
     </Form>
   );

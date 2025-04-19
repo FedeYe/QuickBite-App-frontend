@@ -47,7 +47,7 @@ const MenuSection = () => {
             remove();
             append({ name: "", price: "" });
           }}
-          className="text-white bg-red-700 hover:bg-gray-400"
+          className="text-white bg-red-700 hover:bg-gray-500"
         >
           <Bomb />Remove All Items
         </Button>
