@@ -25,7 +25,7 @@ const MobileNavLinks = () => {
       <Separator className="border border-gray-700 my-1"/>
       <Button
         onClick={() => logout()}
-        className="flex items-center text-white font-bold bg-red-500 hover:bg-gray-500"
+        className="flex items-center text-white font-bold bg-red-500 hover:bg-red-400"
       >
         Logout
       </Button>

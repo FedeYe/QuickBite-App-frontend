@@ -127,7 +127,7 @@ const UserProfileForm = ({ onSave, isLoading, currentUser }: Props) => {
         ) : (
           <Button
             type="submit"
-            className="text-white bg-black hover:bg-gray-500"
+            className="text-white bg-black hover:bg-gray-800"
           >
             <Send/>Submit
           </Button>

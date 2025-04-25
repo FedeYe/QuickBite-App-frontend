@@ -117,7 +117,7 @@ const ManageRestaurantForm = ({ onSave, isLoading, restaurant }: Props) => {
     if (formDataJson.imageFile) {
       formData.append(`imageFile`, formDataJson.imageFile);
     }
-    
+
     onSave(formData);
   };
 
@@ -139,7 +139,7 @@ const ManageRestaurantForm = ({ onSave, isLoading, restaurant }: Props) => {
         ) : (
           <Button
             type="submit"
-            className="text-white bg-black hover:bg-gray-500"
+            className="text-white bg-black hover:bg-gray-800"
           >
             <Send />
             Submit

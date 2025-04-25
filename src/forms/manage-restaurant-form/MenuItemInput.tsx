@@ -59,7 +59,7 @@ const MenuItemInput = ({ index, removeMenuItem }: Props) => {
       <Button
         type="button"
         onClick={removeMenuItem}
-        className="text-white bg-red-500 max-h-fit hover:bg-gray-500"
+        className="text-white bg-red-500 max-h-fit hover:bg-red-400"
       >
         <Trash2/>Remove
       </Button>
