@@ -61,7 +61,8 @@ const MenuItemInput = ({ index, removeMenuItem }: Props) => {
         onClick={removeMenuItem}
         className="text-white bg-red-500 max-h-fit hover:bg-red-400"
       >
-        <Trash2/>Remove
+        <Trash2 />
+        <span className="hidden md:block">Remove</span>
       </Button>
     </div>
   );

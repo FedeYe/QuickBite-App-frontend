@@ -6,7 +6,7 @@ import { CircleUserRound } from "lucide-react";
 const MainNav = () => {
   const { loginWithRedirect, isAuthenticated } = useAuth0();
   return (
-    <span className="flex space-x-2 items-ecnter">
+    <span className="flex space-x-2 items-center">
       {isAuthenticated ? (
         <UsernameMenu />
       ) : (

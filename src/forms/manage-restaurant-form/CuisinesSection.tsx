@@ -16,7 +16,7 @@ const CuisinesSection = () => {
         </div>
         <FormField control={control} name="cuisines" render={({field}) => (
             <FormItem>
-                <div className="grid md:grid-cols-5 gap-1">{cuisineList.map((cuisineItem) => (
+                <div className="grid grid-cols-2 md:grid-cols-5 gap-1">{cuisineList.map((cuisineItem) => (
                     <CuisineCheckbox cuisine={cuisineItem} field={field}/>
                 ))}</div>
                 <FormMessage className="italic text-red-500"/>

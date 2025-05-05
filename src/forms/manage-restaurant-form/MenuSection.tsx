@@ -39,7 +39,7 @@ const MenuSection = () => {
           onClick={() => append({ name: "", price: "" })}
           className="text-white bg-green-700 hover:bg-green-500"
         >
-          <Plus/>Add Menu Item
+          <Plus/>Add Item
         </Button>
         <Button
           type="button"
@@ -47,9 +47,9 @@ const MenuSection = () => {
             remove();
             append({ name: "", price: "" });
           }}
-          className="text-white bg-red-600 hover:bg-red-400"
+          className="text-white bg-red-600 hover:bg-red-400 "
         >
-          <Bomb />Remove All Items
+          <Bomb />Remove All
         </Button>
       </div>
     </div>
