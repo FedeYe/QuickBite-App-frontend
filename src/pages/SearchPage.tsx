@@ -79,7 +79,7 @@ const SearchPage = () => {
   }
 
   if (!results?.data || !city) {
-    return <span>No results found</span>;
+    return <span>No results found for "{city}" :(</span>;
   }
 
   return (
@@ -108,7 +108,11 @@ const SearchPage = () => {
             onChange={(value) => setSortOption(value)}
           />
         </div>
-
+        <PaginationSelector
+          page={results.pagination.page}
+          pages={results.pagination.pages}
+          onPageChange={setPage}
+        />
         {results.data.map((restaurant) => (
           <SearchResultCard restaurant={restaurant} />
         ))}

@@ -25,15 +25,23 @@ const formSchema = z.object({
   country: z.string().min(1, "Country is required"),
 });
 
-type UserFormData = z.infer<typeof formSchema>;
+export type UserFormData = z.infer<typeof formSchema>;
 
 type Props = {
   currentUser: User;
   onSave: (userProfileData: UserFormData) => void;
   isLoading: boolean;
+  title?: string;
+  buttonText?: string;
 };
 
-const UserProfileForm = ({ onSave, isLoading, currentUser }: Props) => {
+const UserProfileForm = ({
+  onSave,
+  isLoading,
+  currentUser,
+  title = "User Profile",
+  buttonText = "Submit",
+}: Props) => {
   const form = useForm<UserFormData>({
     resolver: zodResolver(formSchema),
     defaultValues: currentUser,
@@ -50,10 +58,12 @@ const UserProfileForm = ({ onSave, isLoading, currentUser }: Props) => {
         className="space-y-4 bg-gray-50 rounded-lg p-5 md:p-10"
       >
         <div>
-          <h2 className="text-2xl font-bold"> User Profile Form</h2>
-          <FormDescription className="text-gray-500 mb-2">
-            View and change your profile information here
-          </FormDescription>
+          <h2 className="text-2xl font-bold">{title}</h2>
+          {title == "User Profile" && (
+            <FormDescription className="text-gray-500 mb-2">
+              View and change your profile information here
+            </FormDescription>
+          )}
         </div>
         <FormField
           control={form.control}
@@ -129,7 +139,8 @@ const UserProfileForm = ({ onSave, isLoading, currentUser }: Props) => {
             type="submit"
             className="text-white bg-black hover:bg-gray-800"
           >
-            <Send/>Submit
+            {buttonText == "Submit" && <Send />}
+            {buttonText}
           </Button>
         )}
       </form>
