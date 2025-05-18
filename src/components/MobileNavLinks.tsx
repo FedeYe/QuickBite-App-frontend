@@ -7,22 +7,28 @@ const MobileNavLinks = () => {
   const { logout } = useAuth0();
   return (
     <>
-      <Separator className="border border-gray-700 my-1"/>
+      <Separator className="border border-gray-700 my-1" />
       <div className="flex flex-col space-y-2 items-center">
-        <Link
-          to="/manage-restaurant"
-          className="flex bg-white font-bold p-2 w-64 justify-center rounded-lg hover:text-red-500 hover:bg-red-100"
-        >
-          Manage Restaurant
-        </Link>
         <Link
           to="/user-profile"
           className="flex bg-white font-bold p-2 w-64 justify-center rounded-lg hover:text-red-500 hover:bg-red-100"
         >
           User Profile
         </Link>
+        <Link
+          to="/manage-restaurant"
+          className="flex bg-white font-bold p-2 w-64 justify-center rounded-lg hover:text-red-500 hover:bg-red-100"
+        >
+          Manage My Restaurant
+        </Link>
+        <Link
+          to="/order-status"
+          className="flex bg-white font-bold p-2 w-64 justify-center rounded-lg hover:text-red-500 hover:bg-red-100"
+        >
+          Order Status
+        </Link>
       </div>
-      <Separator className="border border-gray-700 my-1"/>
+      <Separator className="border border-gray-700 my-1" />
       <Button
         onClick={() => logout()}
         className="flex items-center text-white font-bold bg-red-500 hover:bg-red-400"

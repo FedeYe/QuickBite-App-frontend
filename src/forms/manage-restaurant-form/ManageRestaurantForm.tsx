@@ -68,6 +68,7 @@ const ManageRestaurantForm = ({ onSave, isLoading, restaurant }: Props) => {
 
   useEffect(() => {
     if (!restaurant) {
+      console.log("Restaurant not found or not defined")
       return;
     }
 
